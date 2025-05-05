@@ -37,7 +37,7 @@ public class InnerKeyService {
                 });
     }
 
-    @Scheduled(fixedRate = 1, timeUnit = TimeUnit.MINUTES, initialDelay = 1)
+    @Scheduled(fixedRate = 5, timeUnit = TimeUnit.MINUTES, initialDelay = 1)
     public void updateAllKeys() {
         innerKeyManagerService
                 .findAll()
