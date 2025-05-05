@@ -1,8 +1,8 @@
 version: '3.8'
 services:
 
-  lis-notificator:
-    image: lis-notificator
+  youtrade-keygen:
+    image: youtrade-keygen
     restart: on-failure
     network_mode: "host"
     env_file:
