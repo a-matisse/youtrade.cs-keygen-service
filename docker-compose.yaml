@@ -13,3 +13,7 @@ services:
 volumes:
   postgres_data:
     external: true
+
+networks:
+  youtrade-network:
+    external: true
