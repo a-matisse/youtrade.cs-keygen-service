@@ -4,7 +4,8 @@ services:
   youtrade-keygen:
     image: youtrade-keygen
     restart: on-failure
-    network_mode: "host"
+    networks:
+      - youtrade-network
     env_file:
       - ./default.env
 
