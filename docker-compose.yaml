@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+
+  lis-notificator:
+    image: lis-notificator
+    restart: on-failure
+    network_mode: "host"
+    env_file:
+      - ./default.env
+
+    command: java --enable-preview -jar target/youtrade.cs-keygen-service-1.0.jar youtradeKey
+
+volumes:
+  postgres_data:
+    external: true
