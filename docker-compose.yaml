@@ -8,12 +8,7 @@ services:
       - youtrade-network
     env_file:
       - ./default.env
-    cpu_count: 1
-    deploy:
-      resources:
-        limits:
-          memory: 300M
-
+    
     command: java --enable-preview -jar -XX:+UseZGC -Xms256m -Xmx256m target/youtrade.cs-keygen-service-1.0.jar youtradeKey
 
 volumes:
