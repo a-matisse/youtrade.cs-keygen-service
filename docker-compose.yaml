@@ -8,8 +8,14 @@ services:
       - youtrade-network
     env_file:
       - ./default.env
+    deploy:
+      resources:
+        reservations:
+          memory: 100M
+        limits:
+          memory: 150M
 
-    command: java --enable-preview -jar target/youtrade.cs-keygen-service-1.0.jar youtradeKey
+    command: java --enable-preview -jar -XX:+UseZGC -Xms128m -Xmx128m target/youtrade.cs-keygen-service-1.0.jar youtradeKey
 
 volumes:
   postgres_data:
