@@ -11,9 +11,9 @@ services:
     deploy:
       resources:
         reservations:
-          memory: 100M
-        limits:
           memory: 150M
+        limits:
+          memory: 250M
 
     command: java --enable-preview -jar -XX:+UseZGC -Xms128m -Xmx128m target/youtrade.cs-keygen-service-1.0.jar youtradeKey
 
